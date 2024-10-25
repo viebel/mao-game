@@ -150,7 +150,9 @@ export default function Home() {
           <div className="target-number" onClick={resetGame}>
             {target}
           </div>
+          <div className="hourglass-container">
           <HourGlass ref={hourGlassRef} onEnd={onTimerEnd}></HourGlass>
+          </div>
           </div>
           <div className="dice-container">
             {initialDice.map((value, index) => (

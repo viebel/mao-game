@@ -30,7 +30,7 @@ const HourGlass = forwardRef(function HourGlass({ onEnd }, ref) {
     }, []);
 
     return (
-        <div ref={myRef} className="hourglass active">
+        <div ref={myRef} className="hourglass-small active">
             <div className="top"></div>
             <div className="bottom"></div>
         </div>

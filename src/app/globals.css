@@ -263,3 +263,141 @@ body {
     width: 10%;
   }
 }
+
+
+
+.hourglass-small {
+  border-bottom: solid 0.5vmin #630;
+  border-top: solid 0.5vmin #630;
+  left: 50%;
+  margin-left: -3vmin;
+  margin-top: -5.5vmin;
+  padding: 0 0.5vmin;
+  position: absolute;
+  display: none;
+}
+
+.hourglass-small.active {
+  display: block;
+  animation: flip-small 10s ease-in-out;
+}
+
+.hourglass-small .top,
+.hourglass-small .bottom {
+  background-color: #def;
+  box-shadow: 0 0 0.5vmin 0.5vmin #bcd inset;
+  height: 5vmin;
+  overflow: hidden;
+  position: relative;
+  width: 5vmin;
+}
+
+.hourglass-small .top {
+  border-radius: 0 0 50% 50%;
+}
+
+.hourglass-small .top:before {
+  animation: top-small 10s linear forwards;
+  background-color: #fc6;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 5vmin;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateY(50%);
+  width: 5vmin;
+}
+
+.hourglass-small .top:after {
+  animation: top-drip-small 10s linear forwards;
+  background-color: #fc6;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 45%;
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+  width: 5%;
+}
+
+.hourglass-small .bottom {
+  border-radius: 50% 50% 0 0;
+}
+
+.hourglass-small .bottom:before {
+  animation: bottom-small 10s linear forwards;
+  background-color: #fc6;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 5vmin;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+  width: 5vmin;
+}
+
+.hourglass-small .bottom:after {
+  animation: bottom-drip-small 10s linear forwards;
+  background-color: #fc6;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 45%;
+  position: absolute;
+  top: 0;
+  width: 5%;
+}
+
+/* Adjusted animations for hourglass-small */
+@keyframes flip-small {
+  0%, 100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes top-small {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes bottom-small {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+@keyframes top-drip-small {
+  0%, 100% {
+    left: 45%;
+    transform: translateY(100%);
+    width: 5%;
+  }
+}
+
+@keyframes bottom-drip-small {
+  0% {
+    left: 45%;
+    transform: translateY(-100%);
+    width: 5%;
+  }
+  5% {
+    transform: translateY(0);
+  }
+  100% {
+    left: 50%;
+    transform: translateY(0);
+    width: 0;
+  }
+}
