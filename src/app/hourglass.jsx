@@ -1,6 +1,6 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 
-const HourGlass = forwardRef(function HourGlass({ onEnd }, ref) {
+const HourGlass = forwardRef(function HourGlass({ onEnd, size }, ref) {
     const intervalRef = useRef(null);
     const myRef = useRef(null);
     const startTimer = () => {
@@ -27,10 +27,12 @@ const HourGlass = forwardRef(function HourGlass({ onEnd }, ref) {
 
     useEffect(() => {
         startTimer();
+        myRef.current.style.setProperty('--size', size + 'vmin');
+        myRef.current.classList.add('active');
     }, []);
 
     return (
-        <div ref={myRef} className="hourglass-small active">
+        <div ref={myRef} className="hourglass">
             <div className="top"></div>
             <div className="bottom"></div>
         </div>

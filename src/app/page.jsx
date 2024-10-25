@@ -147,12 +147,12 @@ export default function Home() {
 
           <button onClick={restartTimer}>Restart the timer please</button>
           <div className="flex justify-center items-center gap-2 mb-4">
-          <div className="target-number" onClick={resetGame}>
-            {target}
-          </div>
-          <div className="hourglass-container">
-          <HourGlass ref={hourGlassRef} onEnd={onTimerEnd}></HourGlass>
-          </div>
+            <div className="target-number" onClick={resetGame}>
+              {target}
+            </div>
+            <div className="hourglass-container">
+              <HourGlass ref={hourGlassRef} onEnd={onTimerEnd} size={5}></HourGlass>
+            </div>
           </div>
           <div className="dice-container">
             {initialDice.map((value, index) => (
@@ -180,12 +180,12 @@ export default function Home() {
             />
           </div>
           <div className="row">
-            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd}></HourGlass>
-            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd}></HourGlass>
+            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd} size={5}></HourGlass>
+            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd} size={10}></HourGlass>
           </div>
           <div className="row">
-            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd}></HourGlass>
-            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd}></HourGlass>
+            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd} size={8}></HourGlass>
+            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd} size={3}></HourGlass>
           </div>
 
         </div>

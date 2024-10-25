@@ -130,6 +130,7 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
+
 .hourglass {
   border-bottom: solid 1vmin #630;
   border-top: solid 1vmin #630;
@@ -155,6 +156,39 @@ body {
   margin: 0 auto; /* Center each section within hourglass */
 }
 
+
+.hourglass {
+  --size: 8vmin;           /* Base size for scaling */
+  --border-thickness: calc(0.1 * var(--size));
+  --margin-offset: calc(-0.6 * var(--size));
+  --shadow-size: calc(0.1 * var(--size));
+  --drip-width: calc(0.1 * var(--size));
+
+  border-bottom: solid var(--border-thickness) #630;
+  border-top: solid var(--border-thickness) #630;
+  left: 50%;
+  margin-left: var(--margin-offset);
+  margin-top: calc(-1.1 * var(--size));
+  padding: 0 calc(0.1 * var(--size));
+  position: absolute;
+  display: none;
+}
+
+.hourglass.active {
+  display: block;
+  animation: flip 10s ease-in-out;
+}
+
+.hourglass .top,
+.hourglass .bottom {
+  background-color: #def;
+  box-shadow: 0 0 var(--shadow-size) var(--shadow-size) #bcd inset;
+  height: var(--size);
+  overflow: hidden;
+  position: relative;
+  width: var(--size);
+}
+
 .hourglass .top {
   border-radius: 0 0 50% 50%;
 }
@@ -165,12 +199,12 @@ body {
   border-radius: 50%;
   content: "";
   display: block;
-  height: 10vmin;
-  position: absolute;
+  height: var(--size);
   left: 0;
+  position: absolute;
   top: 0;
   transform: translateY(50%);
-  width: 10vmin;
+  width: var(--size);
 }
 
 .hourglass .top:after {
@@ -179,11 +213,11 @@ body {
   content: "";
   display: block;
   height: 100%;
-  position: absolute;
   left: 45%;
+  position: absolute;
   top: 0;
   transform: translateY(100%);
-  width: 10%;
+  width: var(--drip-width);
 }
 
 .hourglass .bottom {
@@ -196,12 +230,12 @@ body {
   border-radius: 50%;
   content: "";
   display: block;
-  height: 10vmin;
-  position: absolute;
+  height: var(--size);
   left: 0;
+  position: absolute;
   top: 0;
   transform: translateY(100%);
-  width: 10vmin;
+  width: var(--size);
 }
 
 .hourglass .bottom:after {
@@ -210,10 +244,10 @@ body {
   content: "";
   display: block;
   height: 100%;
-  position: absolute;
   left: 45%;
+  position: absolute;
   top: 0;
-  width: 10%;
+  width: var(--drip-width);
 }
 
 @keyframes flip {
