@@ -165,7 +165,7 @@ export default function Home() {
               onClick={resetDiceState} />
 
             {['+', '-', '×', '÷'].map((operator) => (
-              <button className="operator-btn" onClick={() => handleOperatorClick(operator)}>{operator}</button>
+              <button key={operator} className="operator-btn" onClick={() => handleOperatorClick(operator)}>{operator}</button>
             ))}
 
             <img
