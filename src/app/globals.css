@@ -131,14 +131,6 @@ body {
   margin-bottom: 20px;
 }
 
-.hourglass {
-  border-bottom: solid 1vmin #630;
-  border-top: solid 1vmin #630;
-  margin: 1vmin auto; /* Center in the DOM flow */
-  padding: 0 1vmin;
-  display: none; /* Initially hidden */
-  width: fit-content;
-}
 
 .hourglass.active {
   display: block;
