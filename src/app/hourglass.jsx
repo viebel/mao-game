@@ -1,13 +1,13 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 
-const HourGlass = forwardRef(function HourGlass({ onEnd, size }, ref) {
+const HourGlass = forwardRef(function HourGlass({ onEnd, size, duration }, ref) {
     const intervalRef = useRef(null);
     const myRef = useRef(null);
     const startTimer = () => {
         if (intervalRef.current) {
             clearTimeout(intervalRef.current);
         }
-        intervalRef.current = setTimeout(() => onEnd(), 10000);
+        intervalRef.current = setTimeout(() => onEnd(), duration*1000);
     }
 
     const restart = () => {
@@ -28,6 +28,8 @@ const HourGlass = forwardRef(function HourGlass({ onEnd, size }, ref) {
     useEffect(() => {
         startTimer();
         myRef.current.style.setProperty('--size', size + 'vmin');
+        myRef.current.style.setProperty('--timer-duration', duration + 's');
+
         myRef.current.classList.add('active');
     }, []);
 

@@ -105,7 +105,7 @@ body {
   justify-content: center;
   width: 70px;
   height: 70px;
-  margin: 0 auto 20px;
+  margin: 0;
 }
 
 .dice-container {
@@ -131,10 +131,16 @@ body {
   margin-bottom: 20px;
 }
 
+.hourglass-container {
+  display: flex;
+  gap: 2vmin; /* Optional: controls spacing between hourglasses */
+  justify-content: center; /* Centers hourglasses in the container */
+  align-items: center;
+}
 
 .hourglass.active {
   display: block;
-  animation: flip 10s ease-in-out;
+  animation: flip var(--timer-duration) ease-in-out;
 }
 
 .hourglass .top,
@@ -162,13 +168,14 @@ body {
   margin-left: var(--margin-offset);
   margin-top: calc(-1.1 * var(--size));
   padding: 0 calc(0.1 * var(--size));
-  position: absolute;
+  margin: 1vmin; /* Optional: add margin for spacing */
+  vertical-align: middle;
   display: none;
 }
 
 .hourglass.active {
-  display: block;
-  animation: flip 10s ease-in-out;
+  display: inline-block; /* Ensure inline alignment */
+  animation: flip var(--timer-duration) ease-in-out;
 }
 
 .hourglass .top,
@@ -186,7 +193,7 @@ body {
 }
 
 .hourglass .top:before {
-  animation: top 10s linear forwards;
+  animation: top var(--timer-duration) linear forwards;
   background-color: #fc6;
   border-radius: 50%;
   content: "";
@@ -200,7 +207,7 @@ body {
 }
 
 .hourglass .top:after {
-  animation: top-drip 10s linear forwards;
+  animation: top-drip var(--timer-duration) linear forwards;
   background-color: #fc6;
   content: "";
   display: block;
@@ -217,7 +224,7 @@ body {
 }
 
 .hourglass .bottom:before {
-  animation: bottom 10s linear forwards;
+  animation: bottom var(--timer-duration) linear forwards;
   background-color: #fc6;
   border-radius: 50%;
   content: "";
@@ -231,7 +238,7 @@ body {
 }
 
 .hourglass .bottom:after {
-  animation: bottom-drip 10s linear forwards;
+  animation: bottom-drip var(--timer-duration) linear forwards;
   background-color: #fc6;
   content: "";
   display: block;
@@ -305,7 +312,7 @@ body {
 
 .hourglass-small.active {
   display: block;
-  animation: flip-small 10s ease-in-out;
+  animation: flip-small var(--timer-duration) ease-in-out;
 }
 
 .hourglass-small .top,
@@ -323,7 +330,7 @@ body {
 }
 
 .hourglass-small .top:before {
-  animation: top-small 10s linear forwards;
+  animation: top-small var(--timer-duration) linear forwards;
   background-color: #fc6;
   border-radius: 50%;
   content: "";
@@ -337,7 +344,7 @@ body {
 }
 
 .hourglass-small .top:after {
-  animation: top-drip-small 10s linear forwards;
+  animation: top-drip-small var(--timer-duration) linear forwards;
   background-color: #fc6;
   content: "";
   display: block;
@@ -354,7 +361,7 @@ body {
 }
 
 .hourglass-small .bottom:before {
-  animation: bottom-small 10s linear forwards;
+  animation: bottom-small var(--timer-duration) linear forwards;
   background-color: #fc6;
   border-radius: 50%;
   content: "";
@@ -368,7 +375,7 @@ body {
 }
 
 .hourglass-small .bottom:after {
-  animation: bottom-drip-small 10s linear forwards;
+  animation: bottom-drip-small var(--timer-duration) linear forwards;
   background-color: #fc6;
   content: "";
   display: block;
