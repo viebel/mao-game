@@ -130,16 +130,13 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
-
 .hourglass {
   border-bottom: solid 1vmin #630;
   border-top: solid 1vmin #630;
-  left: 50%;
-  margin-left: -6vmin;
-  margin-top: -11vmin;
+  margin: 1vmin auto; /* Center in the DOM flow */
   padding: 0 1vmin;
-  position: absolute;
-  display: none;
+  display: none; /* Initially hidden */
+  width: fit-content;
 }
 
 .hourglass.active {
@@ -155,6 +152,7 @@ body {
   overflow: hidden;
   position: relative;
   width: 10vmin;
+  margin: 0 auto; /* Center each section within hourglass */
 }
 
 .hourglass .top {
@@ -168,8 +166,8 @@ body {
   content: "";
   display: block;
   height: 10vmin;
-  left: 0;
   position: absolute;
+  left: 0;
   top: 0;
   transform: translateY(50%);
   width: 10vmin;
@@ -181,8 +179,8 @@ body {
   content: "";
   display: block;
   height: 100%;
-  left: 45%;
   position: absolute;
+  left: 45%;
   top: 0;
   transform: translateY(100%);
   width: 10%;
@@ -199,8 +197,8 @@ body {
   content: "";
   display: block;
   height: 10vmin;
-  left: 0;
   position: absolute;
+  left: 0;
   top: 0;
   transform: translateY(100%);
   width: 10vmin;
@@ -212,16 +210,14 @@ body {
   content: "";
   display: block;
   height: 100%;
-  left: 45%;
   position: absolute;
+  left: 45%;
   top: 0;
   width: 10%;
 }
 
 @keyframes flip {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: rotate(0);
   }
 }
@@ -230,7 +226,6 @@ body {
   0% {
     transform: translateY(100%);
   }
-
   100% {
     transform: translateY(50%);
   }
@@ -240,7 +235,6 @@ body {
   0% {
     transform: translateY(50%);
   }
-
   100% {
     transform: translateY(100%);
   }
@@ -252,12 +246,9 @@ body {
     transform: translateY(-100%);
     width: 10%;
   }
-
   5% {
     transform: translateY(0);
   }
-
-
   100% {
     left: 50%;
     transform: translateY(0);
@@ -266,8 +257,7 @@ body {
 }
 
 @keyframes top-drip {
-  0%,
-  100% {
+  0%, 100% {
     left: 45%;
     transform: translateY(100%);
     width: 10%;

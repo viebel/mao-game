@@ -146,8 +146,11 @@ export default function Home() {
 
 
           <button onClick={restartTimer}>Restart the timer please</button>
+          <div className="flex justify-center items-center gap-2 mb-4">
           <div className="target-number" onClick={resetGame}>
             {target}
+          </div>
+          <HourGlass ref={hourGlassRef} onEnd={onTimerEnd}></HourGlass>
           </div>
           <div className="dice-container">
             {initialDice.map((value, index) => (
@@ -174,7 +177,12 @@ export default function Home() {
               onClick={undoLastOperation}
             />
           </div>
-          <div className="timer-container">
+          <div className="row">
+            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd}></HourGlass>
+            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd}></HourGlass>
+          </div>
+          <div className="row">
+            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd}></HourGlass>
             <HourGlass ref={hourGlassRef} onEnd={onTimerEnd}></HourGlass>
           </div>
 
