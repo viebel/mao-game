@@ -31,8 +31,8 @@ const HourGlass = forwardRef(function HourGlass({ onEnd }, ref) {
 
     return (
         <div ref={myRef} className="hourglass active">
-            <div class="top"></div>
-            <div class="bottom"></div>
+            <div className="top"></div>
+            <div className="bottom"></div>
         </div>
     );
 });
