@@ -13,7 +13,7 @@ const Question = ({ onCorrectAnswer, onIncorrectAnswer }) => {
 
         const randomQuestion = questionsData[Math.floor(Math.random() * questionsData.length)];
         setCurrentQuestion(randomQuestion);
-    }, []);
+    });
 
     const handleAnswerSelect = (option) => {
         setSelectedAnswer(option);

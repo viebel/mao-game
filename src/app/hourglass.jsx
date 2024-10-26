@@ -24,7 +24,7 @@ const HourGlass = forwardRef(function HourGlass({ onEnd, size, duration }, ref) 
                 restart();
             },
         }
-    }, []);
+    });
 
     useEffect(() => {
         startTimer();
@@ -32,7 +32,7 @@ const HourGlass = forwardRef(function HourGlass({ onEnd, size, duration }, ref) 
         myRef.current.style.setProperty('--timer-duration', duration + 's');
 
         myRef.current.classList.add('active');
-    }, []);
+    });
 
     return (
         <div ref={myRef} className="hourglass">

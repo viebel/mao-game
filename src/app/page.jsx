@@ -173,6 +173,7 @@ export default function Home() {
 
           <div className="flex justify-center items-center gap-2 mb-4">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/synchronize.png"
+              alt=""
               className="icon-btn"
               onClick={resetDiceState} />
 
@@ -182,6 +183,7 @@ export default function Home() {
 
             <img
               src="https://img.icons8.com/ios-glyphs/30/000000/undo.png"
+              alt=""
               className="icon-btn"
               onClick={undoLastOperation}
             />
