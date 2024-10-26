@@ -3,7 +3,7 @@ import questionsData from './question_data.json';
 import "./question.css";
 import HourGlass from './hourglass';
 
-const QuestionComponent = ({ onCorrectAnswer, onIncorrectAnswer }) => {
+const Question = ({ onCorrectAnswer, onIncorrectAnswer }) => {
     const hourGlassRef = useRef(null);
     const [currentQuestion, setCurrentQuestion] = useState(null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -55,4 +55,4 @@ const QuestionComponent = ({ onCorrectAnswer, onIncorrectAnswer }) => {
     );
 };
 
-export default QuestionComponent;
+export default Question;
