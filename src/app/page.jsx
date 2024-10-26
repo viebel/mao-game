@@ -2,7 +2,7 @@
 import NonClickableDie from "./non_clickable_die";
 import ClickableDie from "./clickable_die";
 import HourGlass from "./hourglass";
-import React, { useRef } from "react";
+import { useRef, useState } from "react";
 import confetti from "canvas-confetti";
 import Quiz from "./quiz";
 
@@ -33,13 +33,14 @@ const checkSolution = (dice, target) => {
 export default function Home() {
   const numberOfDice = 5;
   const maxTarget = 100;
-  const [initialDice, setInitialDice] = React.useState(randomDice(numberOfDice));
-  const [dice, setDice] = React.useState(initialDice.map((value, index) => ({ value, isActive: true, index })));
-  const [currentResult, setCurrentResult] = React.useState(0);
-  const [selectedNumber, setSelectedNumber] = React.useState(null);
-  const [operator, setOperator] = React.useState(null);
-  const [target, setTarget] = React.useState(Math.floor(Math.random() * maxTarget) + 1);
-  const [history, setHistory] = React.useState([]);
+  const [initialDice, setInitialDice] = useState(randomDice(numberOfDice));
+  const [dice, setDice] = useState(initialDice.map((value, index) => ({ value, isActive: true, index })));
+  const [currentResult, setCurrentResult] = useState(0);
+  const [selectedNumber, setSelectedNumber] = useState(null);
+  const [operator, setOperator] = useState(null);
+  const [target, setTarget] = useState(Math.floor(Math.random() * maxTarget) + 1);
+  const [history, setHistory] = useState([]);
+  const [showQuiz, setShowQuiz] = useState(false);
 
   const saveState = () => {
     setHistory((prevHistory) => [
@@ -109,7 +110,7 @@ export default function Home() {
   };
 
   const onTimerEnd = () => {
-    console.log('Hourglass ended');
+    setShowQuiz(true);
   };
 
   const resetGame = () => {
@@ -186,7 +187,7 @@ export default function Home() {
             />
           </div>
           <div>
-            <Quiz onCorrectAnswer={onCorrectAnswer} onIncorrectAnswer={onIncorrectAnswer}></Quiz>
+            {showQuiz && <Quiz onCorrectAnswer={onCorrectAnswer} onIncorrectAnswer={onIncorrectAnswer}></Quiz>}
           </div>
         </div>
       </div>
