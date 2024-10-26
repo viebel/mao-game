@@ -137,7 +137,8 @@ export default function Home() {
   };
 
   const onCorrectAnswer = () => {
-    console.log('Correct answer');
+    resetDiceState();
+    restartTimer();
     addDie();
   }
 

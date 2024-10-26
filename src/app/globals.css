@@ -27,6 +27,9 @@ body {
   }
 }
 
+.confetti {
+  height: 1px;
+}
 
 .die {
   width: 50px;

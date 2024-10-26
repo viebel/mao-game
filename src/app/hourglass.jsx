@@ -1,6 +1,7 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 
 const HourGlass = forwardRef(function HourGlass({ onEnd, size, duration }, ref) {
+    console.log('onEnd', onEnd);
     const intervalRef = useRef(null);
     const myRef = useRef(null);
     const startTimer = () => {

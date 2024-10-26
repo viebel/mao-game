@@ -28,3 +28,8 @@
 .choice-text {
   font-size: 1em;
 }
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
