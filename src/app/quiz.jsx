@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Question from './Question';
+import Question from './question';
 import Bravo from './bravo';
 import GameOver from './gameover';
 
