@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Question from './Question';
-import Bravo from './Bravo';
-import GameOver from './GameOver';
+import Bravo from './bravo';
+import GameOver from './gameover';
 
 const Quiz = ({onCorrectAnswer, onIncorrectAnswer}) => {
   const [showBravo, setShowBravo] = useState(false);
