@@ -1,0 +1,30 @@
+.question-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.question-text {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.choices-list {
+  list-style: none;
+  padding: 0;
+}
+
+.choice-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.choice-item input[type="radio"] {
+  margin-right: 10px;
+}
+
+.choice-text {
+  font-size: 1em;
+}

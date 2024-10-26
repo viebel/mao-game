@@ -1,0 +1,102 @@
+[
+    {
+      "question": "Quel est le plus long pont du monde ?",
+      "choices": [
+        { "option": "A", "text": "Le Pont du Grand Canal de Pékin" },
+        { "option": "B", "text": "Le Pont de Danyang-Kunshan" },
+        { "option": "C", "text": "Le Pont du détroit d'Akashi Kaikyō" },
+        { "option": "D", "text": "Le Pont du Golden Gate" }
+      ],
+      "correct_option": "B"
+    },
+    {
+      "question": "Quel pont célèbre relie San Francisco à Marin County ?",
+      "choices": [
+        { "option": "A", "text": "Le Pont de Brooklyn" },
+        { "option": "B", "text": "Le Pont du Golden Gate" },
+        { "option": "C", "text": "Le Pont du port de Sydney" },
+        { "option": "D", "text": "Le Pont de Londres" }
+      ],
+      "correct_option": "B"
+    },
+    {
+      "question": "Quel est le plus vieux pont de Paris ?",
+      "choices": [
+        { "option": "A", "text": "Le Pont Neuf" },
+        { "option": "B", "text": "Le Pont des Arts" },
+        { "option": "C", "text": "Le Pont Alexandre III" },
+        { "option": "D", "text": "Le Pont Mirabeau" }
+      ],
+      "correct_option": "A"
+    },
+    {
+      "question": "Quel pont est connu pour être le premier pont en acier au monde ?",
+      "choices": [
+        { "option": "A", "text": "Le Pont de Brooklyn" },
+        { "option": "B", "text": "Le Pont du Forth" },
+        { "option": "C", "text": "Le Pont du port de Sydney" },
+        { "option": "D", "text": "Le Millennium Bridge" }
+      ],
+      "correct_option": "B"
+    },
+    {
+      "question": "Quel ingénieur a conçu le Pont de Brooklyn ?",
+      "choices": [
+        { "option": "A", "text": "Gustave Eiffel" },
+        { "option": "B", "text": "Isambard Kingdom Brunel" },
+        { "option": "C", "text": "John Augustus Roebling" },
+        { "option": "D", "text": "Thomas Telford" }
+      ],
+      "correct_option": "C"
+    },
+    {
+      "question": "Quel pont est un pont basculant célèbre à Londres ?",
+      "choices": [
+        { "option": "A", "text": "Le London Bridge" },
+        { "option": "B", "text": "Le Tower Bridge" },
+        { "option": "C", "text": "Le Millennium Bridge" },
+        { "option": "D", "text": "Le Pont de Westminster" }
+      ],
+      "correct_option": "B"
+    },
+    {
+      "question": "Quel est le pont le plus haut du monde par rapport au sol ?",
+      "choices": [
+        { "option": "A", "text": "Le Pont du détroit d'Akashi Kaikyō" },
+        { "option": "B", "text": "Le Viaduc de Millau" },
+        { "option": "C", "text": "Le Pont de Verrazzano-Narrows" },
+        { "option": "D", "text": "Le Pont Royal Gorge" }
+      ],
+      "correct_option": "B"
+    },
+    {
+      "question": "Quel type de pont est le Pont du Golden Gate ?",
+      "choices": [
+        { "option": "A", "text": "Pont à poutres" },
+        { "option": "B", "text": "Pont à haubans" },
+        { "option": "C", "text": "Pont suspendu" },
+        { "option": "D", "text": "Pont en arc" }
+      ],
+      "correct_option": "C"
+    },
+    {
+      "question": "Quel pont italien est célèbre pour ses boutiques construites dessus ?",
+      "choices": [
+        { "option": "A", "text": "Le Pont du Rialto" },
+        { "option": "B", "text": "Le Ponte Vecchio" },
+        { "option": "C", "text": "Le Pont des Soupirs" },
+        { "option": "D", "text": "Le Pont Sant'Angelo" }
+      ],
+      "correct_option": "B"
+    },
+    {
+      "question": "Quel pont historique est associé à la bataille de Waterloo ?",
+      "choices": [
+        { "option": "A", "text": "Le Pont de Waterloo" },
+        { "option": "B", "text": "Le Pont d'Iéna" },
+        { "option": "C", "text": "Le Pont d'Arcole" },
+        { "option": "D", "text": "Aucun pont n'est associé à la bataille de Waterloo" }
+      ],
+      "correct_option": "D"
+    }
+  ]

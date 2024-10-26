@@ -4,6 +4,7 @@ import ClickableDie from "./clickable_die";
 import HourGlass from "./hourglass";
 import React, { useRef } from "react";
 import confetti from "canvas-confetti";
+import Quiz from "./quiz";
 
 
 function randomDie() {
@@ -109,7 +110,6 @@ export default function Home() {
 
   const onTimerEnd = () => {
     console.log('Hourglass ended');
-    addDie();
   };
 
   const resetGame = () => {
@@ -136,6 +136,16 @@ export default function Home() {
     hourGlassRef.current.restart();
   };
 
+  const onCorrectAnswer = () => {
+    console.log('Correct answer');
+    addDie();
+  }
+
+  const onIncorrectAnswer = () => { 
+    console.log('Game over');
+  };
+
+
   const hourGlassRef = useRef(null);
   return (
     <div className="bg-blue-100 flex items-center justify-center min-h-screen relative">
@@ -147,7 +157,7 @@ export default function Home() {
             <div className="target-number" onClick={resetGame}>
               {target}
             </div>
-              <HourGlass ref={hourGlassRef} onEnd={onTimerEnd} size={5} duration={120}></HourGlass>
+            <HourGlass ref={hourGlassRef} onEnd={onTimerEnd} size={5} duration={120}></HourGlass>
           </div>
           <div className="dice-container">
             {initialDice.map((value, index) => (
@@ -173,6 +183,9 @@ export default function Home() {
               className="icon-btn"
               onClick={undoLastOperation}
             />
+          </div>
+          <div>
+            <Quiz onCorrectAnswer={onCorrectAnswer} onIncorrectAnswer={onIncorrectAnswer}></Quiz>
           </div>
         </div>
       </div>
